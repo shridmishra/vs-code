@@ -1,0 +1,231 @@
+{
+  "root": {
+    "id": "workspace",
+    "name": "demo-workspace",
+    "type": "folder",
+    "tabContents": {
+      "summary": {
+        "type": "markdown",
+        "content": "# Demo Workspace\nWelcome to the demo workspace used to showcase the IDE-style layout. The explorer on the left lists folders and files, while the editor and tabs on the right respond to your selection."
+      },
+      "structure": {
+        "type": "tree",
+        "content": "demo-workspace/\n├── src/\n├── docs/\n└── scripts/"
+      }
+    },
+    "children": [
+      {
+        "id": "src",
+        "name": "src",
+        "type": "folder",
+        "tabContents": {
+          "summary": {
+            "type": "text",
+            "content": "Source files for the demo interface, including the main Next.js page and configuration snippets."
+          },
+          "structure": {
+            "type": "tree",
+            "content": "src/\n├── index.tsx\n└── config.json"
+          }
+        },
+        "children": [
+          {
+            "id": "src-index",
+            "name": "index.tsx",
+            "type": "file",
+            "language": "typescript",
+            "content": "import type { NextPage } from 'next';\n\nconst Home: NextPage = () => {\n  return (\n    <main className=\"min-h-screen bg-slate-950 text-slate-100\">\n      <section className=\"mx-auto max-w-xl space-y-6 p-10\">\n        <h1 className=\"text-3xl font-semibold\">Next.js IDE Demo</h1>\n        <p className=\"text-slate-300\">Swap files in the explorer to load different content into the Monaco editor and contextual tabs.</p>\n      </section>\n    </main>\n  );\n};\n\nexport default Home;\n",
+            "tabContents": {
+              "info": {
+                "type": "text",
+                "content": "Primary application entry point rendered by the IDE demo."
+              },
+              "notes": {
+                "type": "markdown",
+                "content": "### Component Notes\n- Demonstrates Tailwind utility classes alongside MUI styling.\n- Safe to edit: Monaco setup enables live preview in the top pane."
+              },
+              "logs": {
+                "type": "log",
+                "content": "[09:14:02] INFO  Compiled successfully.\n[09:14:05] WARN  Fast refresh triggered."
+              },
+              "preview": {
+                "type": "html",
+                "content": "<div style=\"padding: 1rem; background: linear-gradient(135deg, #312e81, #0f172a); border-radius: 0.75rem; color: #e0e7ff;\"><h3 style=\"margin: 0 0 0.5rem;\">IDE Preview Card</h3><p style=\"margin: 0; line-height: 1.5;\">This HTML preview simulates how the rendered component could appear when styled.</p></div>"
+              }
+            }
+          },
+          {
+            "id": "src-config",
+            "name": "config.json",
+            "type": "file",
+            "language": "json",
+            "content": "{\n  \"featureFlags\": {\n    \"enablePreview\": true,\n    \"useMockData\": false\n  },\n  \"theme\": \"midnight\",\n  \"editor\": {\n    \"fontSize\": 14,\n    \"minimap\": false\n  }\n}\n",
+            "tabContents": {
+              "info": {
+                "type": "json",
+                "content": {
+                  "featureFlags": {
+                    "enablePreview": true,
+                    "useMockData": false
+                  },
+                  "theme": "midnight",
+                  "editor": {
+                    "fontSize": 14,
+                    "minimap": false
+                  }
+                }
+              },
+              "notes": {
+                "type": "markdown",
+                "content": "Configuration mirrored in the Monaco editor. Updating the JSON updates the running experience."
+              },
+              "preview": {
+                "type": "table",
+                "columns": [
+                  {
+                    "field": "key",
+                    "headerName": "Key"
+                  },
+                  {
+                    "field": "value",
+                    "headerName": "Value"
+                  }
+                ],
+                "rows": [
+                  {
+                    "key": "featureFlags.enablePreview",
+                    "value": "true"
+                  },
+                  {
+                    "key": "featureFlags.useMockData",
+                    "value": "false"
+                  },
+                  {
+                    "key": "theme",
+                    "value": "midnight"
+                  },
+                  {
+                    "key": "editor.fontSize",
+                    "value": 14
+                  },
+                  {
+                    "key": "editor.minimap",
+                    "value": "false"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "docs",
+        "name": "docs",
+        "type": "folder",
+        "tabContents": {
+          "summary": {
+            "type": "markdown",
+            "content": "## Documentation\nReference material for contributors and stakeholders lives here."
+          },
+          "structure": {
+            "type": "tree",
+            "content": "docs/\n├── README.md\n└── CHANGELOG.md"
+          }
+        },
+        "children": [
+          {
+            "id": "docs-readme",
+            "name": "README.md",
+            "type": "file",
+            "language": "markdown",
+            "content": "# Demo README\n\nThis markdown file is rendered with **react-markdown** in the preview tab.\n\n## Highlights\n- Config-driven bottom tabs\n- Monaco Editor integration\n- Recursive navigation tree\n",
+            "tabContents": {
+              "info": {
+                "type": "markdown",
+                "content": "### README Overview\nThis document explains the overall purpose of the demo application."
+              },
+              "notes": {
+                "type": "text",
+                "content": "Consider adding diagrams for future documentation iterations."
+              },
+              "preview": {
+                "type": "markdown",
+                "content": "# Live Markdown Preview\nRendered in the bottom panel using react-markdown."
+              }
+            }
+          },
+          {
+            "id": "docs-changelog",
+            "name": "CHANGELOG.md",
+            "type": "file",
+            "language": "markdown",
+            "content": "# Changelog\n\n## 0.1.0\n- Initial commit introducing IDE-like shell.\n- Added Monaco, MUI TreeView, and config-driven tabs.\n",
+            "tabContents": {
+              "info": {
+                "type": "markdown",
+                "content": "Tracks notable updates to the demo workspace."
+              },
+              "notes": {
+                "type": "text",
+                "content": "Next milestone: support multiple editor tabs and resizable panes."
+              },
+              "logs": {
+                "type": "log",
+                "content": "[08:45:22] INFO  Documentation regenerated.\n[08:46:10] INFO  Release notes published."
+              },
+              "preview": {
+                "type": "markdown",
+                "content": "## Release Timeline\n- **0.1.0** — First preview of the IDE shell."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "scripts",
+        "name": "scripts",
+        "type": "folder",
+        "tabContents": {
+          "summary": {
+            "type": "text",
+            "content": "Utility scripts that mirror build and data-fetching behavior."
+          },
+          "structure": {
+            "type": "tree",
+            "content": "scripts/\n└── seed.ts"
+          }
+        },
+        "children": [
+          {
+            "id": "scripts-seed",
+            "name": "seed.ts",
+            "type": "file",
+            "language": "typescript",
+            "content": "import fs from 'node:fs/promises';\n\nasync function seed() {\n  const payload = { status: 'ok', timestamp: Date.now() };\n  await fs.writeFile('seed-result.json', JSON.stringify(payload, null, 2));\n}\n\nseed().catch((error) => {\n  console.error('Seeding failed', error);\n});\n",
+            "tabContents": {
+              "info": {
+                "type": "text",
+                "content": "Generates seed data used throughout local development."
+              },
+              "notes": {
+                "type": "markdown",
+                "content": "Remember to clean up artifacts after running the seed script."
+              },
+              "logs": {
+                "type": "log",
+                "content": "[07:12:05] INFO  Writing seed-result.json\n[07:12:06] ERROR Permission denied"
+              },
+              "preview": {
+                "type": "json",
+                "content": {
+                  "status": "ok",
+                  "timestamp": 1700000000000
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "items": {
+    "folder": {
+      "defaultTab": "summary",
+      "tabs": [
+        {
+          "id": "summary",
+          "label": "Summary"
+        },
+        {
+          "id": "structure",
+          "label": "Structure"
+        }
+      ]
+    },
+    "file": {
+      "defaultTab": "info",
+      "tabs": [
+        {
+          "id": "info",
+          "label": "Info"
+        },
+        {
+          "id": "notes",
+          "label": "Notes"
+        },
+        {
+          "id": "logs",
+          "label": "Logs"
+        },
+        {
+          "id": "preview",
+          "label": "Preview"
+        }
+      ]
+    }
+  }
+}
