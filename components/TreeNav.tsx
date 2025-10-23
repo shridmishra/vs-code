@@ -37,7 +37,7 @@ const TreeNav = ({ root, selectedId, onSelect }: TreeNavProps) => {
     return (
       <TreeItem
         key={node.id}
-        itemID={node.id}
+        nodeId={node.id}
         label={<Box display="flex" alignItems="center" gap={1} py={0.5}>
           {isDir ? (
             <FolderIcon fontSize="small" className="text-blue-300" />
@@ -55,7 +55,8 @@ const TreeNav = ({ root, selectedId, onSelect }: TreeNavProps) => {
               backgroundColor: "rgba(99, 102, 241, 0.25)",
             }
           }
-        }} nodeId={""}      >
+        }}
+      >
         {isDir ? node.children.map(renderTree) : null}
       </TreeItem>
     );
