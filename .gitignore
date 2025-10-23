@@ -21,3 +21,10 @@ pnpm-debug.log*
 
 # TypeScript metadata
 *.tsbuildinfo
+
+# Environment variables (CRITICAL - prevent secrets leak)
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
